@@ -8,7 +8,7 @@ public class Main
     {
         Notepad notepad = new Notepad();
         notepad.addNote("sometext");
-        System.out.println(notepad.getNode(0));
+        System.out.println(notepad.getNodeText(0));
 
     }
 }
