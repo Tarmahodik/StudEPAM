@@ -83,7 +83,6 @@ public class Pen
 
         return String.format("%s@color=%s size=%s price=%f handle=%s",this.getClass().getName(),color.toString(),size.toString(),price,handle);
     }
-
-    //Stirng.format()
+    
 
 }
