@@ -1,4 +1,6 @@
 package Test;
 
-public class Main {
+public class Main
+{
+    
 }

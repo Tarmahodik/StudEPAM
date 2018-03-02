@@ -42,7 +42,7 @@ public class Pen
     private double price;
     private boolean handle;
 
-    Pen()
+    public Pen()
     {
         color = Color.BLUE;
         size = Size.BIG;
@@ -50,7 +50,7 @@ public class Pen
         handle = true;
     }
 
-    Pen(Color color , Size size , Double price , Boolean handle)
+    public Pen(Color color , Size size , Double price , Boolean handle)
     {
         this.price=price;
         this.color=color;
@@ -83,6 +83,6 @@ public class Pen
 
         return String.format("%s@color=%s size=%s price=%f handle=%s",this.getClass().getName(),color.toString(),size.toString(),price,handle);
     }
-    
+
 
 }
