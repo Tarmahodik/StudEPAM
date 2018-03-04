@@ -43,6 +43,4 @@ public class StarterPack
     private Pen pen;
     private Eraser eraser;
 
-
-
 }

@@ -24,9 +24,9 @@ public class Puncher extends Stationery
     private Color color;
     private Size size;
 
-    public Puncher(double price,Color color,Size size)
+    public Puncher(String name,double price,Color color,Size size)
     {
-        super(price);
+        super(name,price);
         this.size = size;
         this.color= color;
     }

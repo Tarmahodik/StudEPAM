@@ -19,7 +19,6 @@ public class Workplace<T>
     }
 
     private String owner;
-
     private List<Stationery> stationery;
 
     public Workplace(String owner)

@@ -40,9 +40,9 @@ public class Pen extends Stationery
         this.handle = handle;
     }
 
-    public Pen(Color color, Size size, Boolean handle,double price)
+    public Pen(String name,Color color, Size size, Boolean handle,double price)
     {
-        super(price);
+        super(name,price);
         this.color = color;
         this.size = size;
         this.handle = handle;

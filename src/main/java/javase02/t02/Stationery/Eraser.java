@@ -6,13 +6,12 @@ import javase02.t01.Color;
 public class Eraser extends Stationery
 {
     private Size size;
-    private Color color;
 
     @Override
     public String toString()
     {
-        return String.format("\nPen\n{\n color = %s\n size = %s\n" +
-                " price = %f\n}",color,size,super.getPrice());
+        return String.format("\nPen\n{\n size = %s\n" +
+                " price = %f\n}",size,super.getPrice());
     }
 
     public Size getSize() {
@@ -23,19 +22,11 @@ public class Eraser extends Stationery
         this.size = size;
     }
 
-    public Color getColor() {
-        return color;
-    }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
 
-    public Eraser(Size size, Color color,double price)
+    public Eraser(String name,Size size,double price)
     {
-        super(price);
+        super(name,price);
         this.size = size;
-        this.color = color;
-
     }
 }

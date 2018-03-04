@@ -12,9 +12,9 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Eraser someEraser = new Eraser(MIDDLE,RED,10.0);
-        Pen somePen = new Pen(RED,MIDDLE,true,23.1);
-        Pen somePen1 = new Pen(RED,MIDDLE,true,25.0);
+        Eraser someEraser = new Eraser("ZEraser",MIDDLE,10.0);
+        Pen somePen = new Pen("BPen",RED,MIDDLE,true,23.1);
+        Pen somePen1 = new Pen("APen",RED,MIDDLE,true,25.0);
 
         Workplace<? extends Stationery> workplace1 = new Workplace<>("Vasiliy Petrov");
         Workplace<? extends Stationery> workplace2 = new Workplace<>("Konstantin Perehodko");
