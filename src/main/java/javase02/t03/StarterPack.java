@@ -3,44 +3,77 @@ package javase02.t03;
 import javase02.t02.Stationery.Eraser;
 import javase02.t02.Stationery.Pen;
 import javase02.t02.Stationery.Puncher;
+import javase02.t02.Stationery.Stationery;
+import org.apache.logging.log4j.util.PropertySource;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class StarterPack
 {
-    public Pen getPen() {
-        return pen;
+    private List<Stationery> starterPackStationery;
+
+
+    private StarterPack(Stationery ... args)
+    {
+        starterPackStationery = new ArrayList<>();
+        Collections.addAll(starterPackStationery, args);
     }
 
-    public void setPen(Pen pen) {
-        if(pen!=null)
+    public StarterPack(@NotNull Puncher puncher ,@NotNull Pen pen , @NotNull Eraser eraser)
+    {
+        this(pen,puncher,eraser);
+    }
+
+
+    private void printAllElementsInStarterPack()
+    {
+        for(Stationery i : starterPackStationery)
         {
-            this.pen = pen;
+            System.out.print(String.format("\nName : %s\nPrice : %s",i.getName(),i.getPrice()));
         }
+        System.out.println("\n");
     }
 
-    public Eraser getEraser() {
-        return eraser;
-    }
+    public void sortByName()
+    {
 
-    public void setEraser(Eraser eraser) {
-        if(eraser!=null)
+        class SorterByName implements Comparator<Stationery>
         {
-            this.eraser = eraser;
+            @Override
+            public int compare(Stationery o1, Stationery o2)
+            {
+                return o1.getName().compareTo(o2.getName());
+            }
         }
+
+        starterPackStationery.sort(new SorterByName());
+        printAllElementsInStarterPack();
     }
 
-    public Puncher getPuncher() {
-        return puncher;
-    }
+    public void sortByPrice()
+    {
 
-    public void setPuncher(Puncher puncher) {
-        if(puncher!=null)
+        class SorterByPrice implements Comparator<Stationery>
         {
-            this.puncher = puncher;
+            @Override
+            public int compare(Stationery o1, Stationery o2)
+            {
+                return (int) (o1.getPrice()-o2.getPrice());
+            }
         }
+
+        starterPackStationery.sort(new SorterByPrice());
+        printAllElementsInStarterPack();
     }
 
-    private Puncher puncher;
-    private Pen pen;
-    private Eraser eraser;
+    public void sortByNameAndPrice()
+    {
+        starterPackStationery.sort(((Comparator<Stationery>) (o1, o2) -> o1.getName().compareTo(o2.getName())).thenComparing((o1, o2) -> (int) (o1.getPrice() - o2.getPrice())));
+        printAllElementsInStarterPack();
+    }
 
 }

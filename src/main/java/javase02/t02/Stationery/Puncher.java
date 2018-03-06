@@ -5,6 +5,14 @@ import javase02.t01.Size;
 
 public class Puncher extends Stationery
 {
+
+    @Override
+    public String toString()
+    {
+        return String.format("\nPuncher\n{\n size = %s\n" +
+                " price = %f\n name = %s\n color = %s\n}",size,super.getPrice(),super.getName(),color.toString());
+    }
+
     public Size getSize() {
         return size;
     }

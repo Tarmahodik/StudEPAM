@@ -12,7 +12,7 @@ public class Pen extends Stationery
     @Override
     public String toString() {
         return String.format("\nPen\n{\n color = %s\n size = %s\n handle = %s\n " +
-                "price = %f\n}",color,size,handle,super.getPrice());
+                "price = %f\n name = %s\n}",color,size,handle,super.getPrice(),super.getName());
     }
 
 

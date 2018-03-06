@@ -11,7 +11,7 @@ public class Eraser extends Stationery
     public String toString()
     {
         return String.format("\nPen\n{\n size = %s\n" +
-                " price = %f\n}",size,super.getPrice());
+                " price = %f\n name = %s\n}",size,super.getPrice(),super.getName());
     }
 
     public Size getSize() {
