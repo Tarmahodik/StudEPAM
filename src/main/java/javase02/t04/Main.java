@@ -22,7 +22,7 @@ public class Main
         Eraser eraser = new Eraser("Aeraser",Size.MIDDLE,11.0);
 
         StarterPack starterpack1 = new StarterPack(puncher,pen,eraser);
-        
+
         starterpack1.sortByName();
         starterpack1.sortByPrice();
         starterpack1.sortByNameAndPrice();
