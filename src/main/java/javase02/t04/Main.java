@@ -18,17 +18,14 @@ public class Main
     public static void main(String[] args)
     {
         Pen pen = new Pen("Zpen",Color.BLUE,Size.BIG,Boolean.TRUE,10.0);
-        Puncher puncher = new Puncher("Zpuncher",9.0,Color.RED,Size.MIDDLE);
+        Puncher puncher = new Puncher("Zpen",9.0,Color.RED,Size.MIDDLE);
         Eraser eraser = new Eraser("Aeraser",Size.MIDDLE,11.0);
 
         StarterPack starterpack1 = new StarterPack(puncher,pen,eraser);
-        StarterPack starterpack2= new StarterPack(puncher,pen,eraser);
-        StarterPack starterpack3 = new StarterPack(puncher,pen,eraser);
-
-
+        
         starterpack1.sortByName();
-        starterpack2.sortByPrice();
-        starterpack3.sortByNameAndPrice();
+        starterpack1.sortByPrice();
+        starterpack1.sortByNameAndPrice();
 
     }
 }
