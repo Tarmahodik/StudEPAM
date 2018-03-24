@@ -38,7 +38,6 @@ public class CrazyLogger
     }
 
 
-    //Можно добавить
     private String findUniversal(Object obj)
     {
         String[] logMass = log.toString().split("\n");
